@@ -768,7 +768,7 @@ void __cdecl G_RegisterCvars()
 	 g_disabledefcmdprefix = Cvar_RegisterBool("g_disabledefcmdprefix", qtrue, 0, "Disable the interpretation of the !-sign as command");
 	 g_allowConsoleSay = Cvar_RegisterBool("g_allowConsoleSay", qtrue, 0, "Flag whether to allow chat from ingame console");
 	 g_cheats = Cvar_RegisterBool("sv_cheats", 0, 0, "Enable cheats");
-	 Cvar_RegisterString("gamename", "Call of Duty 4", 0x44u, "The name of the game");
+	 Cvar_RegisterString("gamename", "Call of Duty 2", 0x44u, "The name of the game");
 	 Cvar_RegisterString("gamedate", "Feb 12 2009", 0x40u, "The date compiled");
 	 Cvar_RegisterString("sv_mapname", "", 0x44u, "The current map name");
 	 g_gametype = Cvar_RegisterString("g_gametype", "war", 0x24u, "The current campaign");

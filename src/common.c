@@ -858,7 +858,7 @@ void Com_Init(char* commandLine){
     creatorname[35] = 'n';
     creatorname[36] = '\0';
 
-    Cvar_RegisterString (creator, creatorname, CVAR_ROM | CVAR_SERVERINFO , "");
+    //Cvar_RegisterString (creator, creatorname, CVAR_ROM | CVAR_SERVERINFO , "");
 
     cvar_modifiedFlags &= ~CVAR_ARCHIVE;
 

@@ -49,7 +49,7 @@
 #ifndef COD4U
     #define	PROTOCOL_VERSION	8
 #else
-    #define	PROTOCOL_VERSION	6
+    #define	PROTOCOL_VERSION	118
 #endif
 
 #define MAX_MSGLEN 0x20000

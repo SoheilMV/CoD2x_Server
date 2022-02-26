@@ -1143,7 +1143,7 @@ void SVC_SourceEngineQuery_Info( netadr_t* from, const char* challengeStr, const
 	}else{
 		MSG_WriteString(&msg, fs_gameDirVar->string);
 	}
-	MSG_WriteString(&msg, "Call of Duty 4 - Modern Warfare");
+	MSG_WriteString(&msg, "Call of Duty 2");
 	MSG_WriteShort(&msg, 7940);
 
 	// don't count privateclients
