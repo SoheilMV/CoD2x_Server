@@ -28,7 +28,7 @@
 
 qboolean Sys_LoadImage(void);
 
-#define BIN_FILENAME "cod4_lnxded-bin"
+#define BIN_FILENAME "cod2_lnxded"
 #define BIN_SECT_PLT_START (void*)0x804a1bc
 #define BIN_SECT_PLT_LENGTH 0xa60
 #define BIN_SECT_TEXT_START (void*)0x804ac20
