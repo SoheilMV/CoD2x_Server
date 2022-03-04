@@ -1,11 +1,11 @@
-# CoD4: Unleashed - Server
-A custom CoD4 Dedicated Server mainly to improve the functionality and usability of the stock CoD4 Server.
+# CoD2x: - Server
+A custom CoD2 Dedicated Server mainly to improve the functionality and usability of the stock CoD2 Server.
 
 ## License
 This software is released under the GNU Affero General Public License v3.0
 
 ## Compiling
-To compile CoD4U-Server you'll need the following installed:
+To compile CoD2x-Server you'll need the following installed:
 * gcc (Linux) or mingw32 (Windows)
 * nasm
 
@@ -34,7 +34,7 @@ sudo pacman -S base-devel nasm
 Compiling is as simple as running the appropriate build script. E.g. for Linux: `./build_elf.sh`.
 
 ## Documentation
-All included functions are documented in our official Scripting API at https://docs.raid-gaming.net/
+All included functions are documented in our official Scripting API at 
 
 ## Support
-If you have a question, feel free to ask over at https://raid-gaming.net/forum/18-call-of-duty-4-unleashed/
+If you have a question, feel free to ask over at https://cod2x.me
