@@ -195,37 +195,37 @@ SECTIONS
   .gnu.attributes 0 : { KEEP (*(.gnu.attributes)) }
   /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }
 
-  . = 0x8040000; /* Image base of cod4_lnxded-bin */
-  . += 0xa1bc; /* Offset of .plt */
+  . = 0x8040000; /* Image base of cod2_lnxded */
+  . += 0x1d44; /* Offset of .plt */
 
-  .cod4bin.plt : {
-    . = 0xa60;
-    *(.cod4bin.plt);
+  .cod2bin.plt : {
+    . = 0x970;
+    *(.cod2bin.plt);
 
   }
 
   . += 0x4; /* Offset of .text */
-  .cod4bin.text : {
-    . = 0x1bf1a4;
-    *(.cod4bin.text);
+  .cod2bin.text : {
+    . = 0xf3c50;
+    *(.cod2bin.text);
   }
 
   . += 0x3c; /* Offset of .rodata */
-  .cod4bin.rodata : {
-    . = 0x36898;
-    *(.cod4bin.rodata);
+  .cod2bin.rodata : {
+    . = 0x22adc;
+    *(.cod2bin.rodata);
   }
 
-  . += 0x2aee8; /* Offset of .data */
-  .cod4bin.data : {
-    . = 0x9454;
-    *(.cod4bin.data);
+  . += 0xF6; /* Offset of .data */
+  .cod2bin.data : {
+    . = 0xb800;
+    *(.cod2bin.data);
   }
 
   . += 0x2c; /* Offset of .bss */
-  .cod4bin.bss : {
-    . = 0xc182240;
-    *(.cod4bin.bss);
+  .cod2bin.bss : {
+    . = 0x8e68d8;
+    *(.cod2bin.bss);
   }
 
 
