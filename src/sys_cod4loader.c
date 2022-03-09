@@ -507,7 +507,7 @@ qboolean Sys_LoadImage( ){
         FS_FreeFile(fileimage);
         return qfalse;
     }
-	
+
     Sys_ImageRunInitFunctions();
 
     return qtrue;
