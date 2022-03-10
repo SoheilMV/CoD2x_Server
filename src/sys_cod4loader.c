@@ -406,10 +406,10 @@ void Sys_ImageRunInitFunctions()
     {
         functions[i]();
     }
-#ifdef PUNKBUSTER	
-	void (*PbSv_Initializer)() = (void*)0x810e59c;
-	PbSv_Initializer();
-#endif
+//#ifdef PUNKBUSTER	
+//	void (*PbSv_Initializer)() = (void*)0x810e59c;
+//	PbSv_Initializer();
+//#endif
 
 }
 

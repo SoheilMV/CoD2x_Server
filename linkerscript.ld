@@ -196,37 +196,28 @@ SECTIONS
   /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }
 
   . = 0x8040000; /* Image base of cod2_lnxded */
-  . += 0x9d44; /* Offset of .plt */
 
-  .cod2bin.plt : {
+  .cod2bin.plt 0x8049d44 : ALIGN(4) {
     . = 0x970;
     *(.cod2bin.plt);
-
   }
 
-  . += 0xc; /* Offset of .text */
-  .cod2bin.text : {
+  .cod2bin.text 0x804a6c0 : ALIGN(16) {
     . = 0xf3c50;
     *(.cod2bin.text);
   }
 
-  . += 0x30; /* Offset of .rodata */
-  .cod2bin.rodata : {
-    . = 0x22adc;
+  .cod2bin.rodata 0x813e340 : ALIGN(32) {
+    . = 0x23cc0;
     *(.cod2bin.rodata);
   }
 
-  . += 0x1c584; /* Offset of .data */
-  .cod2bin.data : {
+  .cod2bin.data 0x817d3a0 : ALIGN(32) {
     . = 0xb800;
     *(.cod2bin.data);
   }
 
-  . += 0x60; /* Offset of .bss */
-  .cod2bin.bss : {
+  .cod2bin.bss 0x8188c00 : ALIGN(128) {
     . = 0x8e68d8;
     *(.cod2bin.bss);
   }
-
-
-}
