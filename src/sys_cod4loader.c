@@ -212,20 +212,19 @@ static byte patchblock_NET_OOB_CALL4[] = { 0x9B, 0x53, 0x17, 0x8,
 	Sys_PatchImageWithBlock(patchblock_G_RegisterCvars, sizeof(patchblock_G_RegisterCvars));
 	Sys_PatchImageWithBlock(patchblock_Scr_AddSourceBuffer_Ignore_fs_game, sizeof(patchblock_Scr_AddSourceBuffer_Ignore_fs_game));  //Maybe script unlock ?
 	Sys_PatchImageWithBlock(patchblock_Scr_AddSourceBuffer_Ignore_fs_game2, sizeof(patchblock_Scr_AddSourceBuffer_Ignore_fs_game2));  //Script unlock
-	Sys_PatchImageWithBlock(patchblock_SV_SpawnServer, sizeof(patchblock_SV_SpawnServer));  //Skip useless check for cvar: sv_dedicated
-	Com_Memset((void*)0x8174da9, 0x90, 5); //In SV_SpawnServer()  Don't overwrite sv.frameusec  (was before unknown write only variable)
-	Com_Memset((void*)0x81753ea, 0x90, 5); //In SV_SpawnServer()  Removing the call of NET_Sleep() I don't know for what this can be usefull to have here O_o
-	Com_Memset((void*)0x8174db5, 0x90, 42); //In SV_SpawnServer()  Don't set cvar cl_paused as well as nextmap
-	Com_Memset((void*)0x8174b9b, 0x90, 116); //In SV_SpawnServer()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
-	Com_Memset((void*)0x8204acf, 0x90, 16); //In ???() Skip useless check for cvar: sv_dedicated
-	Com_Memset((void*)0x8204ce9, 0x90, 16); //In ???() Skip useless check for cvar: sv_dedicated
-	Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL1, sizeof(patchblock_NET_OOB_CALL1));
-	Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL2, sizeof(patchblock_NET_OOB_CALL2));
-	Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL3, sizeof(patchblock_NET_OOB_CALL3));
-	Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL4, sizeof(patchblock_NET_OOB_CALL4));
-
-	Com_Memset((void*)0x81747b5, 0x90, 116); //In SV_???()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
-	Com_Memset((void*)0x817498c, 0x90, 116); //In SV_???()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
+	//Sys_PatchImageWithBlock(patchblock_SV_SpawnServer, sizeof(patchblock_SV_SpawnServer));  //Skip useless check for cvar: sv_dedicated
+	//Com_Memset((void*)0x8174da9, 0x90, 5); //In SV_SpawnServer()  Don't overwrite sv.frameusec  (was before unknown write only variable)
+	//Com_Memset((void*)0x81753ea, 0x90, 5); //In SV_SpawnServer()  Removing the call of NET_Sleep() I don't know for what this can be usefull to have here O_o
+	//Com_Memset((void*)0x8174db5, 0x90, 42); //In SV_SpawnServer()  Don't set cvar cl_paused as well as nextmap
+	//Com_Memset((void*)0x8174b9b, 0x90, 116); //In SV_SpawnServer()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
+	//Com_Memset((void*)0x8204acf, 0x90, 16); //In ???() Skip useless check for cvar: sv_dedicated
+	//Com_Memset((void*)0x8204ce9, 0x90, 16); //In ???() Skip useless check for cvar: sv_dedicated
+	//Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL1, sizeof(patchblock_NET_OOB_CALL1));
+	//Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL2, sizeof(patchblock_NET_OOB_CALL2));
+	//Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL3, sizeof(patchblock_NET_OOB_CALL3));
+	//Sys_PatchImageWithBlock(patchblock_NET_OOB_CALL4, sizeof(patchblock_NET_OOB_CALL4));
+//	Com_Memset((void*)0x81747b5, 0x90, 116); //In SV_???()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
+//	Com_Memset((void*)0x817498c, 0x90, 116); //In SV_???()  Removal of sv_maxclients amd ui_maxclients Cvar_Register()
 /*
 
 static byte patchblock_DB_LOADXASSETS[] = { 0x8a, 0x64, 0x20, 0x8,
@@ -237,11 +236,11 @@ static byte patchblock_DB_LOADXASSETS[] = { 0x8a, 0x64, 0x20, 0x8,
 	SetCall(0x8206492, DB_LoadXAssets_Hook);
 */
 	#ifndef PUNKBUSTER
-		Com_Memset((void*)0x8175255, 0x90, 5);
-		Com_Memset((void*)0x81751fe, 0x90, 5);
+//		Com_Memset((void*)0x8175255, 0x90, 5);
+//		Com_Memset((void*)0x81751fe, 0x90, 5);
 		
 	#endif
-	
+/*
 	SetCall(0x8050ab1, Jump_CalcHeight);
 	SetJump(0x8050786, Jump_IsPlayerAboveMax);
 	SetJump(0x80507c6, Jump_ClampVelocity);
@@ -378,11 +377,12 @@ static byte patchblock_DB_LOADXASSETS[] = { 0x8a, 0x64, 0x20, 0x8,
 	Com_PatchError();
 	Cvar_PatchModifiedFlags();
 	/* Override the unknown gametype -> defaulting to dm bug */
-	*(byte*)0x817c7bc = 0xeb;
+	//*(byte*)0x817c7bc = 0xeb;
 	/* Kill the function DB_AddUserMapDir */
-	*(byte*)0x8204bc8 = 0xc3;
-	*(byte*)0x810f6b4 = 0xcc;
-	*(byte*)0x8176a31 = 0x51;
+	//*(byte*)0x8204bc8 = 0xc3;
+	//*(byte*)0x810f6b4 = 0xcc;
+	//*(byte*)0x8176a31 = 0x51;
+	
 }
 
 
@@ -491,6 +491,7 @@ qboolean Sys_LoadImage( ){
         FS_FreeFile(fileimage);
         return qfalse;
     }
+
     if(Sys_MemoryProtectWrite(BIN_SECT_DATA_START, BIN_SECT_DATA_LENGTH) == qfalse)
     {
         FS_FreeFile(fileimage);
