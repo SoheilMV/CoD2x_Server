@@ -395,13 +395,9 @@ static qboolean Sys_PatchImage()
 
 void Sys_ImageRunInitFunctions()
 {
-
     int i;
 
-    void (*functions[])() = { (void*)0x81d8c1e, (void*)0x81b5d3c, (void*)0x81b104c, (void*)0x81a6040, (void*)0x8197bd4, (void*)0x8191cf4,
-                              (void*)0x818efac, (void*)0x80f32cc, (void*)0x80f1354, (void*)0x80893b0, (void*)0x80803cc, (void*)0x807fe7c,
-		                      (void*)0x807e95c, (void*)0x8076ee4, NULL };
-
+    void (*functions[])() = { (void*)0x813c632, (void*)0x81374fa, (void*)0x812bfb0, (void*)0x81299ac, NULL };
     for(i = 0; functions[i] != NULL; i++)
     {
         functions[i]();

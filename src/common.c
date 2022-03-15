@@ -655,12 +655,13 @@ void Com_InitGamefunctions()
     FS_CopyCvars();
     Com_CopyCvars();
     SV_CopyCvars();
-#ifndef COD4U
-    XAssets_PatchLimits();  //Patch several asset-limits to higher values
-#endif
-    SL_Init();
-    Swap_Init();
 
+#//ifndef COD4U
+ //   XAssets_PatchLimits();  //Patch several asset-limits to higher values
+//#endif
+    SL_Init();
+	Com_Printf("begin $init\n");
+	Swap_Init();
     CSS_InitConstantConfigStrings();
 
     if(com_useFastfiles->integer){

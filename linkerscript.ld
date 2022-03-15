@@ -221,3 +221,4 @@ SECTIONS
     . = 0x8e68d8;
     *(.cod2bin.bss);
   }
+  }

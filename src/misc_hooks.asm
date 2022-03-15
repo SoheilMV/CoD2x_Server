@@ -65,8 +65,8 @@ SL_RemoveRefToString:
 
 SECTION .rodata
 
-oSL_Init dd 0x8150928
-oSwap_Init dd 0x81aa7b6
+oSL_Init dd 0x8079102
+oSwap_Init dd 0x80B7956
 oCSS_InitConstantConfigStrings dd 0x8185a72
 oCon_InitChannels dd 0x82096be
 oSEH_UpdateLanguageInfo dd 0x8180432

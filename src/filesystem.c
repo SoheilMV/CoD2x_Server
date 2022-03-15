@@ -2474,22 +2474,22 @@ static pack_t *FS_LoadZipFile( char *zipfile, const char *basename ) {
 void FS_CopyCvars()
 {
     //SEH
-    *(cvar_t**)0x13f9a1e0 = loc_language;
-    *(cvar_t**)0x13f9a1e4 = loc_forceEnglish;
-    *(cvar_t**)0x13f9a1e8 = loc_translate;
-    *(cvar_t**)0x13f9a1ec = loc_warnings;
-    *(cvar_t**)0x13f9a1f0 = loc_warningsAsErrors;
+//    *(cvar_t**)0x13f9a1e0 = loc_language;
+//    *(cvar_t**)0x13f9a1e4 = loc_forceEnglish;
+//    *(cvar_t**)0x13f9a1e8 = loc_translate;
+//    *(cvar_t**)0x13f9a1ec = loc_warnings;
+//    *(cvar_t**)0x13f9a1f0 = loc_warningsAsErrors;
     //FS
-    *(cvar_t**)0x13f9da00 = fs_debug;
-    *(cvar_t**)0x13f9da14 = fs_copyfiles;
-    *(cvar_t**)0x13f9da10 = fs_cdpath;
-    *(cvar_t**)0x13f9da08 = fs_basepath;
-    *(cvar_t**)0x13f9da0C = fs_basegame;
-    *(cvar_t**)0x13f9da18 = fs_gameDirVar;
-    *(cvar_t**)0x13f9da24 = fs_ignoreLocalized;
-    *(cvar_t**)0x13f9da04 = fs_homepath;
-    *(cvar_t**)0x13f9da1C = fs_restrict;
-    *(cvar_t**)0x13f9da20 = fs_usedevdir;
+//    *(cvar_t**)0x13f9da00 = fs_debug;
+//    *(cvar_t**)0x13f9da14 = fs_copyfiles;
+//    *(cvar_t**)0x13f9da10 = fs_cdpath;
+//    *(cvar_t**)0x13f9da08 = fs_basepath;
+//    *(cvar_t**)0x13f9da0C = fs_basegame;
+//    *(cvar_t**)0x13f9da18 = fs_gameDirVar;
+//    *(cvar_t**)0x13f9da24 = fs_ignoreLocalized;
+//    *(cvar_t**)0x13f9da04 = fs_homepath;
+//    *(cvar_t**)0x13f9da1C = fs_restrict;
+//    *(cvar_t**)0x13f9da20 = fs_usedevdir;
 }
 
 
