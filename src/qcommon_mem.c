@@ -58,9 +58,9 @@ void Mem_Init()
 #endif
     memory = Mem_AlignedAlloc(0x1000, sizeofmemory);
     memset(memory, 0, sizeofmemory);
-    memset((void*)0x1407e7a0, 0, 0x21C);
-    *(int**)(0x1407e7a0) = memory;
-    *(int*)(0x1407e8b8) = sizeofmemory;
+ //   memset((void*)0x1407e7a0, 0, 0x21C);
+//    *(int**)(0x8188E38) = memory;
+//    *(int*)(0x8188E80) = sizeofmemory;
 
 }
 

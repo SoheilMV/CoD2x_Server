@@ -240,124 +240,124 @@ static byte patchblock_DB_LOADXASSETS[] = { 0x8a, 0x64, 0x20, 0x8,
 //		Com_Memset((void*)0x81751fe, 0x90, 5);
 		
 	#endif
-/*
-	SetCall(0x8050ab1, Jump_CalcHeight);
-	SetJump(0x8050786, Jump_IsPlayerAboveMax);
-	SetJump(0x80507c6, Jump_ClampVelocity);
-	SetJump(0x805072a, Jump_GetStepHeight);
-	SetCall(0x80a4b5f, StopFollowingOnDeath);
-	SetJump(0x80a559e, StuckInClient);
-	SetCall(0x80a5ec9, Pmove_GetSpeed);
-	SetCall(0x80a68d0, Pmove_GetGravity);
-	SetJump(0x80a7b60, ClientSpawn);
-	SetJump(0x80ae962, G_Say);
-	SetJump(0x80ce1d8, G_VehSpawner);
-	SetJump(0x80adbf2, Cmd_CallVote_f);
-	SetCall(0x80b5a68, G_RegisterCvars);
-	SetJump(0x80c0b5a, GScr_LoadScripts);
-	SetJump(0x80bc03e, ExitLevel); //ToDo Maybe build GScr_ExitLevel directly
-#ifdef PUNKBUSTER
-	SetJump(0x810e6ea, PbSvGameQuery);
-	SetJump(0x810e5dc, PbSvSendToClient);
-	SetJump(0x810e5b0, PbSvSendToAddrPort);
-	SetJump(0x810e916, DisablePbSv);
-	SetJump(0x810e952, EnablePbSv);
-#else
+
+//	SetCall(0x8050ab1, Jump_CalcHeight);
+//	SetJump(0x8050786, Jump_IsPlayerAboveMax);
+//	SetJump(0x80507c6, Jump_ClampVelocity);
+//	SetJump(0x805072a, Jump_GetStepHeight);
+//	SetCall(0x80a4b5f, StopFollowingOnDeath);
+//	SetJump(0x80a559e, StuckInClient);
+//	SetCall(0x80a5ec9, Pmove_GetSpeed);
+//	SetCall(0x80a68d0, Pmove_GetGravity);
+//	SetJump(0x80a7b60, ClientSpawn);
+//	SetJump(0x80ae962, G_Say);
+//	SetJump(0x80ce1d8, G_VehSpawner);
+//	SetJump(0x80adbf2, Cmd_CallVote_f);
+//	SetCall(0x80b5a68, G_RegisterCvars);
+//	SetJump(0x80c0b5a, GScr_LoadScripts);
+//	SetJump(0x80bc03e, ExitLevel); //ToDo Maybe build GScr_ExitLevel directly
+//#ifdef PUNKBUSTER
+//	SetJump(0x810e6ea, PbSvGameQuery);
+//	SetJump(0x810e5dc, PbSvSendToClient);
+//	SetJump(0x810e5b0, PbSvSendToAddrPort);
+//	SetJump(0x810e916, DisablePbSv);
+//	SetJump(0x810e952, EnablePbSv);
+//#else
 	*(byte*)0x810e916 = 0xc3;
 	*(byte*)0x810e952 = 0xc3;
 #endif
-	SetJump(0x817e988, SV_ClipMoveToEntity);
-	SetJump(0x81d5a14, Sys_Error);
-	SetJump(0x8122724, Com_PrintMessage);
-	SetJump(0x8122d94, Com_DPrintfWrapper);
-	SetJump(0x817452e, SV_Shutdown);
-	SetJump(0x813d086, NET_OutOfBandPrint);
-	SetJump(0x80bfef4, Scr_GetMethod);
-	SetJump(0x80bd238, Scr_GetFunction);
-	SetJump(0x814bef0, Scr_LoadScript);
-	SetJump(0x8170a26, SV_DropClient);
-	SetJump(0x8179120, SV_SendMessageToClient);
-	SetJump(0x817a23e, SV_UpdateServerCommandsToClient);
-	SetJump(0x816f828, SV_WriteDownloadToClient);
-	SetJump(0x817a392, SV_WriteSnapshotToClient);
-	SetJump(0x8178da2, SV_Netchan_TransmitNextFragment);
-	SetJump(0x81d76ca, FS_GetBasepath); //Prior: GetCurrentWorkingDir
-	SetJump(0x8203f72, DB_BuildOSPath);
-	SetJump(0x808b764, ClientScr_SetSessionTeam);
-	SetJump(0x80b43c4, G_LogPrintf);
-	SetJump(0x80a8068, ClientUserinfoChanged);
-	SetJump(0x81aa0be, BigInfo_SetValueForKey);
-	SetJump(0x81d6fca, Sys_Milliseconds);
-	SetJump(0x81d6f7c, Sys_MillisecondsRaw);
-	SetJump(0x81a9f8a, va_binaryfuc);
-	SetJump(0x8131200, MSG_Init);
-	SetJump(0x8131320, MSG_InitReadOnly);
-	SetJump(0x8131294, MSG_InitReadOnlySplit);
-	SetJump(0x8140e9c, Sys_GetValue);
-	SetJump(0x8140efe, Sys_IsMainThread);
-	SetJump(0x8140f42, Sys_IsDatabaseThread);
-	SetJump(0x81d6be4, Sys_EnterCriticalSection);
-	SetJump(0x81d6bc8, Sys_LeaveCriticalSection);
-	SetJump(0x81d7282, Sys_ListFiles);
-	SetJump(0x81d6f06, Sys_FreeFileList);
-	SetJump(0x8177402, SV_SendServerCommand_IW);
-	SetJump(0x818e73c, FS_Restart);
-	SetJump(0x818726c, FS_FCloseFile);
-	SetJump(0x818ba54, FS_FOpenFileRead);
-	SetJump(0x818ba70, FS_FOpenFileReadThread1);
-	SetJump(0x818ba98, FS_FOpenFileByMode);
-	SetJump(0x818bb8c, FS_ReadFile);
-	SetJump(0x8187430, FS_FreeFile);
-	SetJump(0x8186f64, FS_Read);
-	SetJump(0x818a6cc, FS_FOpenFileAppend);
-	SetJump(0x818a96e, FS_FOpenFileWrite);
-	SetJump(0x81281ac, FS_ReferencedIwds);
+//	SetJump(0x817e988, SV_ClipMoveToEntity);
+//	SetJump(0x81d5a14, Sys_Error);
+//	SetJump(0x8122724, Com_PrintMessage);
+//	SetJump(0x8122d94, Com_DPrintfWrapper);
+//	SetJump(0x817452e, SV_Shutdown);
+//	SetJump(0x813d086, NET_OutOfBandPrint);
+//	SetJump(0x80bfef4, Scr_GetMethod);
+//	SetJump(0x80bd238, Scr_GetFunction);
+//	SetJump(0x814bef0, Scr_LoadScript);
+//	SetJump(0x8170a26, SV_DropClient);
+//	SetJump(0x8179120, SV_SendMessageToClient);
+//	SetJump(0x817a23e, SV_UpdateServerCommandsToClient);
+//	SetJump(0x816f828, SV_WriteDownloadToClient);
+//	SetJump(0x817a392, SV_WriteSnapshotToClient);
+//	SetJump(0x8178da2, SV_Netchan_TransmitNextFragment);
+//	SetJump(0x81d76ca, FS_GetBasepath); //Prior: GetCurrentWorkingDir
+//	SetJump(0x8203f72, DB_BuildOSPath);
+//	SetJump(0x808b764, ClientScr_SetSessionTeam);
+//	SetJump(0x80b43c4, G_LogPrintf);
+//	SetJump(0x80a8068, ClientUserinfoChanged);
+//	SetJump(0x81aa0be, BigInfo_SetValueForKey);
+//	SetJump(0x81d6fca, Sys_Milliseconds);
+//	SetJump(0x81d6f7c, Sys_MillisecondsRaw);
+//	SetJump(0x81a9f8a, va_binaryfuc);
+//	SetJump(0x8131200, MSG_Init);
+//	SetJump(0x8131320, MSG_InitReadOnly);
+//	SetJump(0x8131294, MSG_InitReadOnlySplit);
+//	SetJump(0x8140e9c, Sys_GetValue);
+//	SetJump(0x8140efe, Sys_IsMainThread);
+//	SetJump(0x8140f42, Sys_IsDatabaseThread);
+//	SetJump(0x81d6be4, Sys_EnterCriticalSection);
+//	SetJump(0x81d6bc8, Sys_LeaveCriticalSection);
+//	SetJump(0x81d7282, Sys_ListFiles);
+//	SetJump(0x81d6f06, Sys_FreeFileList);
+//	SetJump(0x8177402, SV_SendServerCommand_IW);
+//	SetJump(0x818e73c, FS_Restart);
+//	SetJump(0x818726c, FS_FCloseFile);
+//	SetJump(0x818ba54, FS_FOpenFileRead);
+//	SetJump(0x818ba70, FS_FOpenFileReadThread1);
+//	SetJump(0x818ba98, FS_FOpenFileByMode);
+//	SetJump(0x818bb8c, FS_ReadFile);
+//	SetJump(0x8187430, FS_FreeFile);
+//	SetJump(0x8186f64, FS_Read);
+//	SetJump(0x818a6cc, FS_FOpenFileAppend);
+//	SetJump(0x818a96e, FS_FOpenFileWrite);
+//	SetJump(0x81281ac, FS_ReferencedIwds);
 
-	SetJump(0x81a2944, Cvar_RegisterString);
-	SetJump(0x81a2d94, Cvar_RegisterBool);
-	SetJump(0x81a2cc6, Cvar_RegisterInt);
-	SetJump(0x81a2860, Cvar_RegisterEnum);
-	SetJump(0x81a2e6c, Cvar_RegisterFloat);
-	SetJump(0x81a2bea, Cvar_RegisterVec2);
-	SetJump(0x81a2b08, Cvar_RegisterVec3);
-	SetJump(0x81a2550, Cvar_RegisterColor);
+	SetJump(0x80b4232, Cvar_RegisterString); //DONE
+//	SetJump(0x81a2d94, Cvar_RegisterBool);
+//	SetJump(0x81a2cc6, Cvar_RegisterInt);
+//	SetJump(0x81a2860, Cvar_RegisterEnum);
+//	SetJump(0x81a2e6c, Cvar_RegisterFloat);
+//	SetJump(0x81a2bea, Cvar_RegisterVec2);
+//	SetJump(0x81a2b08, Cvar_RegisterVec3);
+//	SetJump(0x81a2550, Cvar_RegisterColor);
 
-	SetJump(0x81a14fa, Cvar_SetString);
-	SetJump(0x81a1c6c, Cvar_SetBool);
-	SetJump(0x81a20c4, Cvar_SetInt);
-	SetJump(0x81a1fe0, Cvar_SetFloat);
-	SetJump(0x81a14c2, Cvar_SetColor);
-	SetJump(0x81a3422, Cvar_SetStringByName);
-	SetJump(0x81a3020, Cvar_SetFloatByName);
-	SetJump(0x81a3178, Cvar_SetIntByName);
-	SetJump(0x81a32dc, Cvar_SetBoolByName);
-	SetJump(0x81a3f66, Cvar_Set);
+//	SetJump(0x81a14fa, Cvar_SetString);
+//	SetJump(0x81a1c6c, Cvar_SetBool);
+//	SetJump(0x81a20c4, Cvar_SetInt);
+//	SetJump(0x81a1fe0, Cvar_SetFloat);
+//	SetJump(0x81a14c2, Cvar_SetColor);
+//	SetJump(0x81a3422, Cvar_SetStringByName);
+//	SetJump(0x81a3020, Cvar_SetFloatByName);
+//	SetJump(0x81a3178, Cvar_SetIntByName);
+//	SetJump(0x81a32dc, Cvar_SetBoolByName);
+//	SetJump(0x81a3f66, Cvar_Set);
 
-	SetJump(0x819e7c0, Cvar_GetBool);
-	SetJump(0x819e810, Cvar_GetString);
-	SetJump(0x819e90a, Cvar_GetInt);
+//	SetJump(0x819e7c0, Cvar_GetBool);
+//	SetJump(0x819e810, Cvar_GetString);
+//	SetJump(0x819e90a, Cvar_GetInt);
 
-	SetJump(0x819e6d0, Cvar_FindVar);
-	SetJump(0x819f328, Cvar_ForEach);
-	SetJump(0x81264f4, Cvar_InfoString_IW_Wrapper);
-	SetJump(0x81a1cc4, Com_LoadDvarsFromBuffer);
+//	SetJump(0x819e6d0, Cvar_FindVar);
+//	SetJump(0x819f328, Cvar_ForEach);
+//	SetJump(0x81264f4, Cvar_InfoString_IW_Wrapper);
+//	SetJump(0x81a1cc4, Com_LoadDvarsFromBuffer);
 
-	SetJump(0x8110ff8, Cbuf_AddText_Wrapper_IW);
-	SetJump(0x8110f3e, Cbuf_InsertText_Wrapper_IW);
-	SetJump(0x8111bea, Cmd_ExecuteSingleCommand);
-	SetJump(0x812257c, Com_Error);
-	SetCall(0x815ea33, Scr_Sys_Error_Wrapper);
-	SetJump(0x814f128, RuntimeError);
+//	SetJump(0x8110ff8, Cbuf_AddText_Wrapper_IW);
+//	SetJump(0x8110f3e, Cbuf_InsertText_Wrapper_IW);
+//	SetJump(0x8111bea, Cmd_ExecuteSingleCommand);
+//	SetJump(0x812257c, Com_Error);
+//	SetCall(0x815ea33, Scr_Sys_Error_Wrapper);
+//	SetJump(0x814f128, RuntimeError);
 
-	SetJump(0x80e2a9e, dError);
-	SetJump(0x80e2a9e, dMessage);
-	SetJump(0x8165f18 ,yy_create_buffer);
-	SetJump(0x8165aba ,Com_StdErrorStub);
-	SetJump(0x8165d46 ,Com_StdErrorStub);
-	SetJump(0x8165dc6 ,Com_StdErrorStub);
-	SetJump(0x8165f7c ,Com_StdErrorStub);
-	SetJump(0x8166628 ,Com_StdErrorStub);
-	SetJump(0x81d4bec ,Sys_OutOfMemError);
+//	SetJump(0x80e2a9e, dError);
+//	SetJump(0x80e2a9e, dMessage);
+//	SetJump(0x8165f18 ,yy_create_buffer);
+//	SetJump(0x8165aba ,Com_StdErrorStub);
+//	SetJump(0x8165d46 ,Com_StdErrorStub);
+//	SetJump(0x8165dc6 ,Com_StdErrorStub);
+//	SetJump(0x8165f7c ,Com_StdErrorStub);
+//	SetJump(0x8166628 ,Com_StdErrorStub);
+//	SetJump(0x81d4bec ,Sys_OutOfMemError);
 
 
 	if( atoi( Cvar_VariableString("scr_debugnotify")) )

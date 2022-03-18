@@ -625,7 +625,7 @@ void Com_InitThreadData()
 
 void Com_CopyCvars()
 {
-    *(cvar_t**)0x88a6170 = com_useFastfiles;
+//    *(cvar_t**)0x88a6170 = com_useFastfiles;
     *(cvar_t**)0x88a6184 = com_developer;
     *(cvar_t**)0x88a6188 = com_developer_script;
     *(cvar_t**)0x88a61b0 = com_logfile;
@@ -662,7 +662,7 @@ void Com_InitGamefunctions()
     SL_Init();
 	Com_Printf("begin $init\n");
 	Swap_Init();
-    CSS_InitConstantConfigStrings();
+    //CSS_InitConstantConfigStrings();
 
     if(com_useFastfiles->integer){
 
