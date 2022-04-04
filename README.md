@@ -37,4 +37,4 @@ Compiling is as simple as running the appropriate build script. E.g. for Linux: 
 All included functions are documented in our official Scripting API at 
 
 ## Support
-If you have a question, feel free to ask over at https://cod2x.me
+If you have a question, feel free to ask YctN#1140 on Discord.
