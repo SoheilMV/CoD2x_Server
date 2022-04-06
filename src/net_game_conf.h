@@ -35,7 +35,7 @@
 #define __NET_GAMECONF_H__
 
 #ifndef AUTHORIZE_SERVER_NAME
-#define	AUTHORIZE_SERVER_NAME	"cod4master.activision.com"
+#define	AUTHORIZE_SERVER_NAME	"cod2master.activision.com"
 #endif
 
 #define AUTHORIZE_TIMEOUT 10000
@@ -46,11 +46,8 @@
 
 #define	PORT_SERVER		28960
 
-#ifndef COD4U
-    #define	PROTOCOL_VERSION	8
-#else
-    #define	PROTOCOL_VERSION	118
-#endif
+#define	PROTOCOL_VERSION	118
+
 
 #define MAX_MSGLEN 0x20000
 
