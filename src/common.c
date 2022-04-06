@@ -740,6 +740,9 @@ void Com_InitGamefunctions()
     }
     return qtrue;
 }*/
+qboolean Com_LoadBinaryImage() {
+	Com_Printf("--- Game binary initialization ---\n");
+}
 
 /*
 =================
@@ -918,7 +921,7 @@ void Com_Init(char* commandLine){
 
     AddRedirectLocations( );
 
-    //Com_LoadBinaryImage( );
+    Com_LoadBinaryImage( );
 
     com_fullyInitialized = qtrue;
 
