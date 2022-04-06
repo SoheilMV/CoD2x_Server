@@ -895,6 +895,7 @@ void Com_Init(char* commandLine){
     NV_LoadConfig();
 
     Com_Printf("--- Common Initialization Complete ---\n");
+	Com_Printf("Teste\n");
 
     Cbuf_Execute( 0, 0 );
 
