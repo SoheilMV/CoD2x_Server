@@ -721,7 +721,7 @@ void Com_InitGamefunctions()
 
 }
 
-qboolean Com_LoadBinaryImage()
+/*qboolean Com_LoadBinaryImage()
 {
 
     if(gamebinary_initialized == qtrue)
@@ -739,7 +739,7 @@ qboolean Com_LoadBinaryImage()
         return qfalse;
     }
     return qtrue;
-}
+}*/
 
 /*
 =================
