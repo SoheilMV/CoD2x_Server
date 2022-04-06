@@ -908,12 +908,12 @@ void Com_Init(char* commandLine){
 
 
     HL2Rcon_Init( );
-/*
+
     if(sv_webadmin->boolean)
     {
         HTTPServer_Init();
     }
-*/
+
     Auth_Init( );
 
     AddRedirectLocations( );
