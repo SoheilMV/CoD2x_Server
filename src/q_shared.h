@@ -102,8 +102,8 @@ typedef enum {qfalse, qtrue}	qboolean;
 #define STDCALL __attribute__((stdcall))
 #endif
 
-#define HOMEPATH_NAME_UNIX ".callofduty4"
-#define HOMEPATH_NAME_WIN		"CallofDuty4"
+#define HOMEPATH_NAME_UNIX ".callofduty2"
+#define HOMEPATH_NAME_WIN		"CallofDuty2"
 #define HOMEPATH_NAME_MACOSX		HOMEPATH_NAME_WIN
 
 #define	MAX_STRING_TOKENS	1024	// max tokens resulting from Cmd_TokenizeString
