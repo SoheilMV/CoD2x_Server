@@ -27,20 +27,20 @@
 #define __SYS_COD4DEFS_H__
 
 
-#define EXECUTABLE_NAME "cod4u_dedrun"
+#define EXECUTABLE_NAME "cod2x_lnxded"
 
-#define PRODUCT_NAME				"CoD4: Unleashed Dedicated Server"
+#define PRODUCT_NAME				" CoD2X: Dedicated Server - Alpha"
 #define BASEGAME					"main"
-#define CLIENT_WINDOW_TITLE     	"CoD4: Unleashed Dedicated Server"
-#define CLIENT_WINDOW_MIN_TITLE 	"CoD4: Unleashed"
+#define CLIENT_WINDOW_TITLE     	" CoD2X: Dedicated Server - Alpha"
+#define CLIENT_WINDOW_MIN_TITLE 	" CoD2X: Dedicated Server - Alpha"
 
-#define PORT_MASTER 20810
-#define MASTER_SERVER_NAME "cod4master.activision.com"
-#define MASTER_SERVER_NAME2 "cod4master.iceops.co"
-#define HEARTBEAT_GAME "COD-4"
+#define PORT_MASTER 28960
+#define MASTER_SERVER_NAME "cod2master.activision.com"
+#define MASTER_SERVER_NAME2 "master01.cod2x.me"
+#define HEARTBEAT_GAME "COD-2"
 #define HEARTBEAT_DEAD "flatline"
 
-#define PRODUCT_VERSION "1.0"
+#define PRODUCT_VERSION "1.3a"
 
 /*
 #ifdef COD4U
@@ -49,9 +49,9 @@
     #define Q3_VERSION "1.8"
 #endif
 */
-#define Q3_VERSION "1.7u"
+#define Q3_VERSION "1.3a"
 
-#define GAME_STRING "CoD4: Unleashed"
+#define GAME_STRING "  CoD2X"
 
 #include "version.h"
 #ifndef BUILD_NUMBER

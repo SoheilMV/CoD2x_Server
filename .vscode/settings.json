@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "server.h": "c",
+        "sys_cod4defs.h": "c"
+    }
+}
