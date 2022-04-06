@@ -918,7 +918,7 @@ void Com_Init(char* commandLine){
 
     AddRedirectLocations( );
 
-    Com_LoadBinaryImage( );
+    //Com_LoadBinaryImage( );
 
     com_fullyInitialized = qtrue;
 
